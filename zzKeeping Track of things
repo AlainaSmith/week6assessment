@@ -1,0 +1,7 @@
+I need to make a test case for the app.get error, changing the 
+name to bots instead of botsArr. 
+Do this in the functions.test.
+
+QUESTIONS:
+
+Why does it work on liveserver and not localhost?

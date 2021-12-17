@@ -7,24 +7,24 @@ const {shuffleArray} = require('./utils')
 app.use(express.json())
 
 
-
-app.get('/html', function(req, res) {    
-    res.sendFile(path.join(__dirname, '/public/index.html'))
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'))
 })
 
-app.get('/css', function(req, res) {    
-    res.sendFile(path.join(__dirname, '/public/styles.css'))
+app.get('/styles', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/styles.css'))
 })
 
-app.get('/main', function(req, res) {    
-    res.sendFile(path.join(__dirname, '/public/main.js'))
+app.get('/main', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/main.js'))
 })
+
 
 
 app.get('/api/robots', (req, res) => {
     try {
-        res.status(200).send(botsArr)
-    } catch (error) {
+        res.status(200).send(bots)   //my console log is saying ERROR GETTING BOTS, botsArr not defined, figure out why.
+    } catch (error) {                   //YAYYYY I figured it out, now make this a test case!! wooh!
         console.log('ERROR GETTING BOTS', error)
         res.sendStatus(400)
     }

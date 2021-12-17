@@ -17,6 +17,7 @@ let choices = []
 let compDuo = []
 let playerDuo = []
 
+
 duelBtn.classList.add('hide')
 playAgainBtn.classList.add('hide')
 chooseHeader.classList.add('hide')
